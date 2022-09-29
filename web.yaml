@@ -1,0 +1,13 @@
+---
+- name: docker
+  hosts: "*"
+  become: yes
+  tasks:
+    - name: docker stop
+      shell: docker stop web
+      ignore_errors: true
+    - name: docker remove container
+      shell: docker rm web
+      ignore_errors: true
+    - name: image remove
+      shell: docker image rmi s4sabari4/sample-project
