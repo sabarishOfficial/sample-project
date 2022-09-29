@@ -12,3 +12,4 @@
     - name: image remove
       shell: docker image rmi s4sabari4/sample-project
       ignore_errors: true
+      
